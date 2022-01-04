@@ -19,8 +19,8 @@ static int minimaxGetAbsuloteScoreOfPiece(char piece) {
 
 	return 0;
 }
-
-static int minimaxScoringFunction(GameBoard gameBoard, GamePlayer positivePlayer) {
+// Heuristic Evaluation FUnction
+static int heuristicEvaluation(GameBoard gameBoard, GamePlayer positivePlayer) {
 	char currentPiece;
 	int whiteScore = 0, blackScore = 0;
 
@@ -61,7 +61,7 @@ static MoveAndValue minimaxAlphabetaPruning(Game * game, int depth, int alpha, i
 	}
 
 	if (depth == 0){
-		currentMV.value = minimaxScoringFunction(game->gameBoard, maximizingPlayer ? gameGetCurrentPlayer(game) : gameGetOtherPlayer(game));
+		currentMV.value = heuristicEvaluation(game->gameBoard, maximizingPlayer ? gameGetCurrentPlayer(game) : gameGetOtherPlayer(game));
 		return currentMV;
 	}
 
