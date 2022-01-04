@@ -59,7 +59,7 @@ static MoveAndValue minimaxAlphabetaPruning(Game * game, int depth, int alpha, i
 		currentMV.value = 0;
 		return currentMV;
 	}
-
+	// If we reached the top of tree it is time to choose and make move
 	if (depth == 0){
 		currentMV.value = heuristicEvaluation(game->gameBoard, maximizingPlayer ? gameGetCurrentPlayer(game) : gameGetOtherPlayer(game));
 		return currentMV;
