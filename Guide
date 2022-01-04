@@ -1,0 +1,7 @@
+Man page of commands:
+    game_mode [1(single player)/2(multi player)]
+    difficulty [1-5]
+    user_color [0(Black)/1(WHite)]
+    move <old_row,old_col> to <new_row,new_col> like mode <2,A> to <4,A> Pawn will be moved from 2A to 4A.
+    load path_to_load_from
+    save path_to_save
