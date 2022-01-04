@@ -534,13 +534,6 @@ the move is threatened) or piece threat (i.e the piece can be captured after thi
 
 It sets the given boolean pointers.
 These 2 checks are not seperate for optimization.
-
-@param game - the game
-@param from - the piece square
-@param to - the destination square
-@param movesCreatesKingThreat - pointer to the king threat boolean indicator 
-@param moveCreatesPieceThreat - pointer to the piece threat boolean indicator 
-
 */
 static void gameDoesMoveCreateKingThreatOrPieceThreat(Game * game, BoardSquare from, BoardSquare to, 
 	bool * moveCreatesKingThreat, bool * moveCreatesPieceThreat) {
